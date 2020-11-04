@@ -1,7 +1,6 @@
 # Description:
 #   Contains files for loading, training and evaluating TF-Slim-based models.
 # load("//devtools/python/blaze:python3.bzl", "py2and3_test")
-load("//devtools/python/blaze:pytype.bzl", "pytype_strict_binary")
 
 package(
     default_visibility = ["//visibility:public"],
@@ -932,7 +931,7 @@ py_test(  # py2and3_test
     ],
 )
 
-pytype_strict_binary(
+py_binary(
     name = "post_training_quantization",
     srcs = ["nets/post_training_quantization.py"],
     python_version = "PY3",
